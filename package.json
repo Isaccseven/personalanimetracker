@@ -1,12 +1,12 @@
 {
   "name": "animetracker",
-  "homepage": "http://devslike.me/personalanimetracker/",
+  "homepage": "https://devslike.me/personalanimetracker/",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.25.0",
