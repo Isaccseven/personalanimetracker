@@ -33,7 +33,6 @@ const Toolbar = () => {
         await extracted("Demon Slayer");
     }, []);
 
-
     return (
         <div className="container-fluid bg-white p-4">
             <ul className="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
@@ -55,17 +54,6 @@ const Toolbar = () => {
                     <button className="btn btn-primary text-white" onClick={async () => await extracted(searchValue)} type="button">Search</button>
                 </form>
             </ul>
-            <div className="tab-content" id="pills-tabContent">
-                <div className="tab-pane fade show active" id="pills-home" role="tabpanel"
-                     aria-labelledby="pills-catalog-tab">
-                    <Catalog data={data} loading={loading}/>
-                </div>
-                <div className="tab-pane fade" id="pills-library" role="tabpanel"
-                     aria-labelledby="pills-library-tab">
-                    <Library/>
-                </div>
-            </div>
-
         </div>
     );
 };
