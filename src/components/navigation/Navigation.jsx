@@ -1,6 +1,11 @@
 import React from 'react';
+import AuthHandler from "../auth/AuthHandler";
+
 
 const Navigation = () => {
+
+
+
     return (
         <nav className="navbar navbar-expand-lg justify-content-evenly navbar-light bg-primary">
             <div className="container-fluid">
@@ -12,10 +17,7 @@ const Navigation = () => {
                             </a>
                         </li>
                     </ul>
-                    <form className="form-check">
-                        <button className="btn btn-outline-primary bg-white text-primary mx-2" type="submit">Login</button>
-                        <button className="btn btn-outline-primary bg-white text-primary mx-2" type="submit">Register</button>
-                    </form>
+                    <AuthHandler/>
                 </div>
             </div>
         </nav>

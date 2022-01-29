@@ -1,5 +1,5 @@
 import React from 'react';
-import Toolbar from "./maincontent/Toolbar";
+import Toolbar from "./Toolbar";
 
 const MainContent = () => {
 

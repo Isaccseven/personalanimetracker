@@ -5,10 +5,16 @@ import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import {BrowserRouter} from "react-router-dom";
+import {Auth0Provider} from "@auth0/auth0-react";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Auth0Provider
+        domain="isaccseven.eu.auth0.com"
+        clientId="QajI9bYodNgtB5qlqVLZ8V88M3OXXnM9"
+        redirectUri={window.location.origin}
+    >
+        <App/>
+    </Auth0Provider>,
+    document.getElementById('root')
 )
