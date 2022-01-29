@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {Auth0Provider} from "@auth0/auth0-react";
-import {Provider} from "react-redux";
 
 ReactDOM.render(
     <Auth0Provider
@@ -14,9 +13,7 @@ ReactDOM.render(
         clientId="QajI9bYodNgtB5qlqVLZ8V88M3OXXnM9"
         redirectUri={window.location.origin}
     >
-        <Provider store={store}>
-            <App/>
-        </Provider>
+        <App/>
     </Auth0Provider>,
     document.getElementById('root')
 )

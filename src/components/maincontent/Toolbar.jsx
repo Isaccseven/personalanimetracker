@@ -1,36 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
-import Catalog from "./catalog/Catalog";
-import Library from "./library/Library";
 
 
-const Toolbar = () => {
-
-    const baseURL = "https://www.aniflix.cc/api/show/search";
+const Toolbar = (props) => {
     const [searchValue, setSearchValue] = useState(" ");
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-
-    async function extracted(searchParameter) {
-
-        const response = await fetch(baseURL, {
-            method: 'POST',
-            headers: {
-                "Content-Type":"application/json;charset=UTF-8",
-                "Accept":"application/json, text/plain, */*"
-            },
-            body: JSON.stringify({"search":searchParameter}),
-            redirect: 'follow'
-        });
-        const data = await response.json();
-        const results = data;
-        console.log(results)
-        setData(results);
-        setLoading(false);
-    }
 
     useEffect(async () => {
-        await extracted("Demon Slayer");
+        await props.extracted("Demon Slayer");
     }, []);
 
     return (
@@ -51,7 +26,7 @@ const Toolbar = () => {
                 <span className="w-50"></span>
                 <form className="d-flex">
                     <input className="form-control me-2" type="search" placeholder="Search" onChange={(e) => setSearchValue(e.target.value)} aria-label="Search"/>
-                    <button className="btn btn-primary text-white" onClick={async () => await extracted(searchValue)} type="button">Search</button>
+                    <button className="btn btn-primary text-white" onClick={async () => await props.extracted(searchValue)} type="button">Search</button>
                 </form>
             </ul>
         </div>

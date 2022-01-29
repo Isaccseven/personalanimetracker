@@ -4,8 +4,6 @@ import AuthHandler from "../auth/AuthHandler";
 
 const Navigation = () => {
 
-
-
     return (
         <nav className="navbar navbar-expand-lg justify-content-evenly navbar-light bg-primary">
             <div className="container-fluid">
